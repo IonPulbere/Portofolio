@@ -1,23 +1,30 @@
 html {
   /* background:linear-gradient(#fff,#46B29D); */
   /* background-repeat: no-repeat; */
+  background-color: #403a3a;
 }
-
+body{
+  /* background: url(../img/back.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  font-family: open sans;
+}
 .wrapper {
-  max-width: 87rem;
+  max-width: 60rem;
   width: 80%;
   margin: 1em auto;
 }
 
 /* ---------------------------------------Nav-Section--------------- */
 
-#responsive-nav {
+.responsive-nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
+
   /* display: none; */
 }
 
@@ -33,11 +40,11 @@ html {
   text-decoration: none;
   font-weight: bold;
   padding: 1.2em;
-  color: red;
+  color: #fff;
 }
 
 #responsive-nav>li>a:hover {
-  border-bottom: 2px solid;
+  border-bottom: 2px red solid;
 }
 
 .logo {
@@ -47,14 +54,33 @@ html {
   flex-basis: 50%;
 }
 
-.logo * {
-  border: 1px solid;
+.logo>a {
+  color: #fff;
+  text-decoration:none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+.logo a .mydetails{
+  text-transform: uppercase;
+  /* border: 1px solid; */
+  flex-grow: 1;
 
+}
+.logo a .mydetails .name{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.logo a .mydetails .position{
+  font-size: .8em;
+
+}
 .logo>a>img {
   display: block;
   max-width: 70%;
-  min-width: 70%;
+  width: 20%;
+  /* border: 1px solid; */
+
 }
 
 /* toggle menu */
@@ -65,11 +91,13 @@ html {
   padding: .5em;
   cursor: pointer;
   display: none;
+  color: red;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  color: white;
 }
 
 nav>ul {
@@ -77,13 +105,29 @@ nav>ul {
 }
 
 @media only screen and (max-width: 750px) {
-  #responsive-nav {
-    display: none;
+  .responsive-nav {
+    display:none;
   }
   .nav-toggle {
     display: block;
   }
   .logo {
     flex-basis: 100%;
+  }
+  .wrapper {
+    max-width: 60rem;
+    width: 95%;
+  }
+  nav{
+    flex-wrap: wrap;
+
+  }
+  .show{
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.4);
+  }
+  .show>li{
+    width: 100%;
   }
 }
