@@ -108,6 +108,8 @@ nav {
 nav>ul {
   flex-grow: 1;
 }
+/* meddia======================================================== */
+
 
 @media only screen and (max-width: 750px) {
   .responsive-nav {
@@ -141,6 +143,14 @@ nav>ul {
   }
 
 }
+@media only screen and (max-width: 950px) {
+#projects-page .project{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+}
+/* media end */
 /* hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhome======== */
 #home-page{
   color: #fff;
@@ -186,7 +196,112 @@ border-radius: 10px;
   margin-top: 4em;
   padding-top: 2em;
   padding-bottom: 2em;
-  display: grid;
-  grid-template-columns:repeat(3,1fr);
-  grid-gap: 10px;
+  color:#fff;
+}
+#projects-page .project{
+  margin-bottom: 1em;
+  display:flex;
+  justify-content: space-between;
+  /* border: 1px solid; */
+  padding: 3em .5em;
+  position: relative;
+}
+#projects-page .project .pr-img{
+/* flex-basis: 50%; */
+padding: 0;
+/* border: 1px solid; */
+flex-shrink: 0;
+
+/* width: 300px; */
+}
+#projects-page .project .pr-img img{
+  /* display: block; */
+/* max-width: 100%; */
+/* min-width: 100%; */
+
+}
+#projects-page .description{
+  margin-left: 2em;
+  flex-shrink: 1;
+}
+.tags-website>ul{
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags-website>ul>li{
+    /* border: 1px solid; */
+    padding: .4em;
+    margin: 0.2em .5em;
+    border-radius: 10px;
+    background-color: red;
+
+}
+
+.project::before,
+ .project::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    left: 1px;
+    width: 100%;
+    top: 10%;
+    /* max-width: 400px; */
+    -moz-box-shadow: 0 10px 10px red;
+    box-shadow: 0 10px 10px red;
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+/* flip +++++++++++++++++++++++++++++++++++++++++ +++++++++++++++++++++++++++flip*/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+.flip-container, .front, .back {
+	width: 400px;
+	height: 300px;
+}
+/* flip speed goes here */
+.flipper {
+	transition: 0.7s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+  background-color: pink;
+  text-align: center;
+}
+.back>a{
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  margin-top: 25%;
+}
+.back>h2{
+margin-top: 10%;
 }
