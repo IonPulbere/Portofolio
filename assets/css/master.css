@@ -261,7 +261,7 @@ nav>ul {
 }
 
 #projects-page .description {
-  margin-left: 2em;
+  /* margin-left: 2em; */
   flex-shrink: 1;
   text-align: center;
 }
@@ -321,7 +321,9 @@ nav>ul {
 .flip-container {
   perspective: 1000px;
 }
-
+.flipper{
+  display: flex;
+}
 /* flip the pane when hovered */
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -345,6 +347,7 @@ nav>ul {
 
 .front, .back {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -569,6 +572,10 @@ nav>ul {
     0%{color:white;}
     100%{color:red;}
 }
+/*  dddddddddddddddddddddddddddddddddd*/
+
+
+
 
 /* meddia======================================================== */
 
@@ -644,6 +651,7 @@ nav>ul {
 @media only screen and (max-width:480px) {
   .link-button {
     flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     width: 70%;
     margin: 0 auto;
@@ -654,5 +662,30 @@ nav>ul {
   .prg-img {
     width: 80%;
   }
+  #contentFooter{
+    width: 100%;
+      }
+      body{
+        background-image: url(../img/home420.png);
 
+      }
+
+}
+@media only screen and (max-width:320px) {
+
+  .flip-container, .front, .back {
+    width: 310px;
+    height: 250px;
+  }
+  .link-button {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  body{
+    background-image: url(../img/homesmall.png);
+
+  }
+  
 }
