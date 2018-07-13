@@ -1,0 +1,220 @@
+#ipt-name{
+  grid-area: name;
+}
+#ipt-email{
+  grid-area: email;
+}
+#ipt-phone{
+  grid-area: phone;
+}
+#ipt-message{
+  grid-area: message;
+}
+#send-bt{
+  grid-area: send;
+}
+form{
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: .5em;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+  "name    name    name    name    email   email   email   email   phone   phone   phone   phone"
+  "message message message message message message message message message message message message"
+  ".        .       .       .       send   send    send    send        .       .      .       .";
+}
+#ipt-message .graphic{
+  height: 10em;
+}
+#send-bt{
+ border: 1px solid ;
+ /* padding: .3em 3em; */
+ border-radius:.4em;
+ background-color: transparent;
+ font-size: 1em;
+ font-weight: bold;
+ transition: 1s;
+ color: red;
+ text-align: center;
+ line-height: 2.5;
+}
+#send-bt:hover{
+  background-color: red;
+  color: #fff;
+}
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	width: 100%; /* latimea cimpului */
+	/* width: calc(100% - 2em); */
+	vertical-align: top;
+	overflow: hidden;
+	/* padding-bottom: 1em; */
+	/* margin: 1em; */
+		/* height: 550px; */
+
+}
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	font-weight: 400;
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+	/* ds */
+	padding: 0.6em 0.5em;
+	margin-top: 1.25em;
+	width: 100%;
+	background: transparent;
+	color: #000; /* culoarea la scriss */
+	font-size: 1.4em;
+	opacity: 0;
+	border: 0;
+	/* border: 1px solid black; */
+	/* border-radius: 10px; */
+
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__field::after{
+	border: 1px solid;
+}
+.input__label {
+	display: inline-block;
+	float: right;
+	color: #000;
+	font-weight: bold;
+	font-size: 80.25%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/*  das*/
+	width: 100%;
+	text-align: left;
+	position: absolute;
+	top: .5em;
+	pointer-events: none;
+	overflow: hidden;
+	padding: 0 0.25em;
+	-webkit-transform: translate3d(1em, 2.75em, 0);
+	transform: translate3d(1em, 2.75em, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	width: 100%;
+	/* asdas */
+	color: #fff;
+	padding: 0.4em 0 0.25em;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+
+
+.input__label-content::after {
+	content: attr(data-content);
+	position: absolute;
+	font-weight: bold;
+	top: 100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: #ff0000; /* color background after */
+	padding: 0.25em 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.85em;
+}
+
+.graphic {
+	fill: #696666; /* color background initial */
+	pointer-events: none;
+	top: 1em;
+	bottom: 0px;
+	height: 4.5em;
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.7s, fill 0.7s;
+	transition: transform 0.7s, fill 0.7s;
+	-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+	transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input__field:focus,
+.input--filled .input__field {
+	-webkit-transition: opacity 0s 0.35s;
+	transition: opacity 0s 0.35s;
+	opacity: 1;
+
+}
+
+.input__field:focus + .input__label,
+.input--filled .input__label {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.input__field:focus + .input__label .input__label-content,
+.input--filled .input__label-content {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
+
+.input__field:focus ~ .graphic,
+.input--filled .graphic {
+	fill: #d6d6d6;
+	-webkit-transform: translate3d(-66.6%, 0, 0);
+	transform: translate3d(-66.6%, 0, 0);
+}
+
+/* ----------------------------------------------------------------Media */
+
+
+@media only screen and (max-width: 950px) {
+form{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "name    name    name     "
+  "email   email   email   "
+  "phone   phone   phone   "
+  "message message message "
+  ".       send       .";
+}
+}
+@media only screen and (max-width: 769px) {
+  form{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "name"
+    "email"
+    "phone"
+    "message"
+    "send";
+    color:green;
+
+  }
+/* #send-bt{
+  color:green;
+} */
+}

@@ -1,123 +1,213 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/normalizer.css">
-    <link rel="stylesheet" href="assets/css/master.css">
-    <title>Ion Pulbere Portofolio</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <nav>
-          <div class="logo">
-            <a href="#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/normalizer.css">
+  <link rel="stylesheet" href="assets/css/master.css">
+  <link rel="stylesheet" href="assets/css/forform.css">
+  <title>Ion Pulbere Portofolio</title>
+</head>
+
+<body>
+
+  <header id="header">
+    <nav class="wrapper-section" id="navmenu">
+      <div class="logo">
+        <a href="#header">
               <img src="assets/img/logov2.png" alt="MyLogo">
               <div class="mydetails">
               <div class="name">Ion Pulbere</div>
               <div class="position">Front-End Web Developer</div>
               </div>
             </a>
-            <div id="nav-toggle" class="nav-toggle">&#9776;</div>
-          </div>
-         <ul id="responsive-nav" class="responsive-nav">
-            <li> <a href="#">home</a> </li>
-            <li> <a href="#">projects</a> </li>
-            <li> <a href="#">contact</a> </li>
-         </ul>
-        </nav>
-      </header>
-      <main>
-      <section id="home-page">
-        <h1>Front-end Web Developer.</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-           velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-             laborum.</p>
-          <div class="link-button">
-            <a href="#" class="box boot-1">I need a web site <i>&#62;</i> </a>
-            <a href="#" class="box boot-2">I'm looking to hire <i>&#62;</i> </a>
-          </div>
+        <div id="nav-toggle" class="nav-toggle">&#9776;</div>
+      </div>
+      <ul id="responsive-nav" class="responsive-nav">
+        <li> <a href="#header" class="actClass">home</a> </li>
+        <li> <a href="#projects-page">projects</a> </li>
+        <li> <a href="#sec-map">contact</a> </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home-page" class="wrapper-section">
+      <h1>Front-end Web Developer.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <div class="link-button">
+        <a href="#" class="box boot-1"><span>I need a web site</span> <img src="assets/img/arrow.png" alt="arrow"> </a>
+        <a href="#contact-page" class="box boot-2"><span>I'm looking to hire</span> <img src="assets/img/arrow.png" alt="arrow"> </a>
+      </div>
 
-      </section>
-      <section id="projects-page">
+    </section>
+    <div class="prj-main-section">
+      <section id="projects-page" class="wrapper-section">
         <!-- prj 1 -->
         <div class="project">
-          <div class="pr-img flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="pr-img flip-container" id="ss2" >
             <div class="flipper">
               <div class="front">
-              <img src="http://via.placeholder.com/400x300 " alt="project1">
+                <img src="assets/img/project.png" alt="project1">
               </div>
               <div class="back">
-                <h2>Pro tv</h2>
-                <p>just a litle text</p>
+                <h2>Project 1</h2>
+                <p>description description</p>
                 <a href="#">View Project</a>
               </div>
             </div>
           </div>
           <div class="description">
-            <h1>Pro TV</h1>
+            <h1><a href="#">Project 1</a></h1>
             <p>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
             <div class="tags-website">
               <ul>
-                <li>Css3</li>
-                <li>Html5</li>
-                <li>Html5</li>
-                <li>Html5 ApI  canvas </li>
-                <li>Html5 ApI  canvas </li>
-                <li>Html5 ApI  canvas </li>
-                <li>Html5 ApI  canvas </li>
-                <li>Html5 ApI  canvas </li>
+                <li>CSS3</li>
+                <li>HTML5</li>
+                <li>JavaScript</li>
+                <li>Google Map ApI canvas </li>
+                <li>Html5 API canvas </li>
+                <li>Html5 API canvas </li>
+                <li>Html5 API canvas </li>
+                <li>Html5 API canvas </li>
               </ul>
             </div>
           </div>
         </div>
         <!-- prj2 -->
-        <div class="project" >
+        <div class="project">
 
-          <div class="pr-img flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="pr-img flip-container" id="ss" >
             <div class="flipper">
               <div class="front">
-              <img src="http://via.placeholder.com/400x300 " alt="project1">
+                <img src="assets/img/project.png " alt="project1">
               </div>
               <div class="back">
-                <h2>GOORU</h2>
-                <p>just a litle text</p>
+                <h2>Project 2</h2>
+                <p>description description</p>
                 <a href="#">View Project</a>
               </div>
             </div>
 
           </div>
           <div class="description">
-            <h1>GOORU</h1>
+            <h1><a href="#">Project 2</a></h1>
             <p>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
             <div class="tags-website">
               <ul>
-                <li>Css3</li>
-                <li>Html5 ApI  canvas </li>
-                <li>Html5 ApI  canvas </li>
-                <li>Html5 ApI  canvas </li>
-                <li>GPS ApI  canvas </li>
-                <li>Video ApI  canvas </li>
+                <li>CSS3</li>
+                <li>HTML5 API canvas </li>
+                <li>HTML5 API canvas </li>
+                <li>HTML5 API canvas </li>
+                <li>GPS API  </li>
+                <li>Video API  </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-
-
-      <section id="contact-page">
-
-      </section>
-      </main>
-      <footer>
-
-      </footer>
     </div>
-    <script src="assets/js/toggle.js"> </script>
-  </body>
+    <div class="cnt-main-section">
+      <section id="sec-map">
+        <div id="sec-waterford" class="map">
+
+        </div>
+        <div id="sec-cork" class="map">
+
+        </div>
+      </section>
+
+      <section id="contact-page" class="wrapper-section">
+        <div class="left-side">
+          <h1> <a href="mailto:IonPulbere@ICloud.com">Contact Me</a> </h1>
+          <ul>
+            <li><a href="https://github.com/IonPulbere"> <img src="assets/img/social/git.png" alt="git icon"> </a> </li>
+            <li><a href="https://www.linkedin.com/in/ionpulbere/"> <img src="assets/img/social/linkedin.png" alt="linkedin icon"> </a> </li>
+            <li><a href="mailto:IonPulbere@ICloud.com"> <img src="assets/img/social/email.png" alt="email icon"> </a> </li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <form class="mainform" action="index.html" method="post">
+            <!--  name-->
+            <span class="input" id="ipt-name">
+					<input class="input__field " type="text" id="name"  required/>
+					<label class="input__label " for="name">
+						<span class="input__label-content " data-content="Name">Name</span>
+            </label>
+            <svg class="graphic " width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,
+						4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,
+						0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52
+						,1200,52V9z"/>
+					</svg>
+            </span>
+            <!--Email  -->
+            <span class="input " id="ipt-email">
+					<input class="input__field " type="email" id="email"  required/>
+					<label class="input__label " for="email">
+						<span class="input__label-content " data-content="Email">Email</span>
+            </label>
+            <svg class="graphic " width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994
+						,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002
+						,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200
+						,52,1200,52V9z"/>
+					</svg>
+            </span>
+            <!-- Phone -->
+            <span class="input " id="ipt-phone">
+					<input class="input__field " type="tel" id="phone"  required/>
+					<label class="input__label " for="phone">
+						<span class="input__label-content " data-content="Phone">Phone</span>
+            </label>
+            <svg class="graphic " width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994
+						,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002
+						,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200
+						,52,1200,52V9z"/>
+					</svg>
+            </span>
+            <!-- message -->
+            <span class="input " id="ipt-message">
+					<textarea class="input__field " name="name" rows="4" cols="80" id="message"  required></textarea>
+					<label class="input__label " for="message">
+						<span class="input__label-content " data-content="Message">Message</span>
+            </label>
+            <svg class="graphic " width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994
+						,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002
+						,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200
+						,52,1200,52V9z"/>
+					</svg>
+            </span>
+            <button type="submit" name="send" id="send-bt">Send</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="wrapper-section" id="ft">
+    <div id="contentFooter">
+      <p id="pid"> &copy; Ion Pulbere <span id="year"></span> &reg;</p>
+    </div>
+  </footer>
+  <script src="assets/js/toggle.js">  </script>
+  <script src="assets/js/classie.js">  </script>
+  <script src="assets/js/local.js">  </script>
+  <script src="assets/js/map.js">  </script>
+  <script src="assets/js/menuactive.js">  </script>
+  <script src="assets/js/footer.js">  </script>
+  <script src="assets/js/sticky.js">  </script>
+  <script src="assets/js/flip.js">  </script>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4We3lNk83xzwvGqJ80eeHPfhjT-Jr6Yc&callback=createmaps"></script>
+
+
+
+</body>
+
 </html>
