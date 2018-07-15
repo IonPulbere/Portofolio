@@ -31,12 +31,14 @@ form{
  /* padding: .3em 3em; */
  border-radius:.4em;
  background-color: transparent;
- font-size: 1em;
+ font-size: 1.4em;
  font-weight: bold;
  transition: 1s;
  color: red;
  text-align: center;
  line-height: 2.5;
+ font-family: 'Oswald', sans-serif;
+
 }
 #send-bt:hover{
   background-color: red;
@@ -47,12 +49,9 @@ form{
 	z-index: 1;
 	display: inline-block;
 	width: 100%; /* latimea cimpului */
-	/* width: calc(100% - 2em); */
 	vertical-align: top;
 	overflow: hidden;
-	/* padding-bottom: 1em; */
-	/* margin: 1em; */
-		/* height: 550px; */
+
 
 }
 .input__field {
@@ -60,19 +59,20 @@ form{
 	display: block;
 	float: right;
 	font-weight: 400;
-	font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	-webkit-appearance: none; /* for box shadows to show on iOS */
-	/* ds */
+    font-family: 'Roboto', sans-serif;
+  -webkit-appearance:none;   /* for box shadows to show on iOS */
+   -moz-appearance:none;  /* me */
+        appearance:none;  /* me  */
+
 	padding: 0.6em 0.5em;
 	margin-top: 1.25em;
 	width: 100%;
-	background: transparent;
+	/* background: transparent; */
+  background-color: RGBA(255, 255, 255, .1);
 	color: #000; /* culoarea la scriss */
 	font-size: 1.4em;
 	opacity: 0;
 	border: 0;
-	/* border: 1px solid black; */
-	/* border-radius: 10px; */
 
 }
 
@@ -159,16 +159,18 @@ form{
 
 .input__field:focus,
 .input--filled .input__field {
-	-webkit-transition: opacity 0s 0.35s;
-	transition: opacity 0s 0.35s;
+  -webkit-transition: opacity 0s 0.35s;
+-o-transition: opacity 0s 0.35s;
+transition: opacity 0s 0.35s;
 	opacity: 1;
 
 }
 
 .input__field:focus + .input__label,
 .input--filled .input__label {
-	-webkit-transition-delay: 0.15s;
-	transition-delay: 0.15s;
+  -webkit-transition-delay: 0.15s;
+     -o-transition-delay: 0.15s;
+        transition-delay: 0.15s;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 }
@@ -218,3 +220,10 @@ form{
   color:green;
 } */
 }
+
+/* @media only screen and (max-width: 320px) {
+
+.input__field{
+  background: #d6d6d6;
+}
+} */

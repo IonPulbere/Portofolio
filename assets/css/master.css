@@ -525,8 +525,11 @@ nav>ul {
   line-height: 2;
   font-size: .7em;
   border-radius: 1em;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding: .3em 0;
+  width: 80%;
+  margin: 0 auto;
+  /* padding-top: .5em; */
+  /* padding-bottom: .5em; */
 
   ;
 
@@ -559,6 +562,7 @@ nav>ul {
   padding: 4em;
   color: #fff;
   text-align: center;
+  font-size: 1em;
 }
 /* footer Effect ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #contentFooter{
@@ -575,9 +579,9 @@ nav>ul {
   background-size: contain;
   background-position: 10px 0px;
   color: transparent;
-   -moz-background-clip: text;
   background-clip: text;
   -webkit-background-clip: text;
+  
 }
 
 #contentFooter p:hover{
@@ -590,8 +594,8 @@ nav>ul {
 }
 
 @keyframes forfooter {
-    0%{color:white;}
-    100%{color:red;}
+    0%{color:#fff;}
+    100%{color:#f8cfcf;}
 }
 /*  dddddddddddddddddddddddddddddddddd*/
 
