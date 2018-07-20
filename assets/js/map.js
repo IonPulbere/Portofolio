@@ -1,6 +1,7 @@
 function myMap(log,lat,idelem) {
+         var myCenter = new google.maps.LatLng(log,lat );
       var mapOptions = {
-        center: new google.maps.LatLng(log,lat ),
+        center:myCenter ,
         disableDefaultUI: true,
         zoomControl: true,
 
@@ -13,9 +14,9 @@ function myMap(log,lat,idelem) {
             {
               featureType: 'administrative.locality',
               elementType: 'labels.text.fill',
-              stylers: [{color: '#d1c844'},{visibility: 'off'}]
+              stylers: [{color: '#551414'},{visibility: 'on'}]
             },
-            
+
             {
               featureType: 'poi',
               elementType: 'labels.text.fill',
@@ -90,6 +91,11 @@ function myMap(log,lat,idelem) {
 
       }
       var map = new google.maps.Map(document.getElementById(idelem), mapOptions);
+     var marker = new google.maps.Marker({
+        position: myCenter,
+        animation: google.maps.Animation.BOUNCE
+      });
+      marker.setMap(map);
     }
 
 

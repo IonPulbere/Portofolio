@@ -86,17 +86,6 @@ main{
   transition:   border-bottom-color 1s;
   position: relative;
 }
-
-
-.actClass {
-  border-bottom-width: 5px  ;
-  border-bottom-style: solid;
-  border-bottom-color: red;
-}
-.actClass:hover{
-  border-bottom-width: 0 ;
-
-}
 #responsive-nav>li>a::before{
   content: '';
   background-color:  red;
@@ -105,7 +94,7 @@ main{
   position: absolute;
   left: 0;
   bottom:  0;
-    width: 0%;
+  width: 0%;
   transition: all ease-in-out 250ms;
 }
 #responsive-nav>li>a:hover::before
@@ -113,6 +102,17 @@ main{
   width: 100%;
 }
 
+.actClass::before{
+            width: 100% !important;
+}
+.actClass:hover::before{
+  animation: forActmenu 500ms;
+}
+@keyframes forActmenu {
+  0%   {width: 100% }
+  50%  {width: 0% }
+  100% {width: 100% }
+}
 .logo {
   display: flex;
   justify-content: space-between;
@@ -137,6 +137,8 @@ main{
 .logo a .mydetails .name {
   font-size: 1.2em;
   font-weight: bold;
+  letter-spacing:5px;
+  margin-bottom: 2px;
 }
 
 .logo a .mydetails .position {
@@ -158,8 +160,13 @@ main{
   cursor: pointer;
   display: none;
   color: red;
+   transform:scale(2,1);
+   transition: 1s;
+  /* margin-bottom: -50%; */
 }
-
+.nav-toggle:hover{
+  transform:scale(2,1.5);
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -581,7 +588,7 @@ nav>ul {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  
+
 }
 
 #contentFooter p:hover{
@@ -645,7 +652,15 @@ nav>ul {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, .6);
+    /* transition: opacity 0.3s ease; */
+    /* animation: forform 2s ; */
+
   }
+  /* @keyframes forShow {
+    0%   {opacity: 0 }
+    100% {opacity: 1 }
+
+  } */
   .show>li {
     width: 100%;
   }
