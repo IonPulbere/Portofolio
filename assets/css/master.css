@@ -599,10 +599,13 @@ nav>ul {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 10px 0px;
-  color: transparent;
+
+  /* color: #fff; */
+  /* mix-blend-mode: darken; */
+
   background-clip: text;
   -webkit-background-clip: text;
-
+color: transparent;
 }
 
 #contentFooter p:hover{
@@ -681,6 +684,9 @@ nav>ul {
   #home-page h1 {
     margin-top: 0;
     text-align: center;
+    letter-spacing: 0;
+    font-size: 3em;
+
   }
   #contact-page {
     grid-template-columns: 100%;
