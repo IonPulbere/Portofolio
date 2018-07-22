@@ -28,8 +28,8 @@ a {
 }
 
 .wrapper-section {
-  max-width: 60rem;
-  width: 80%;
+  max-width: 80rem;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -202,10 +202,16 @@ nav>ul {
 
 #home-page h1 {
   margin-top: 3em;
-  font-size: 3em;
+  font-size: 4em;
+  letter-spacing: .1em;
+  font-family: 'Roboto', sans-serif;
 }
 #home-page p{
   text-align: justify;
+  line-height: 1.5;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+
 }
 .link-button {
   margin-top: 2em;
@@ -225,6 +231,10 @@ nav>ul {
   padding: 1em;
   border-radius: 5px;
   font-size: 1.2em;
+  transition: font-weight 1s;
+  border:2px solid #fff;
+
+
 
 
   /* border: 1px solid; */
@@ -233,14 +243,13 @@ nav>ul {
 
 .boot-1 {
   background-color: red;
-  border:1px solid #fff;
 
   /* margin-right: px; */
 }
 
 .boot-2 {
   background-color: #08090d;
-  border:1px solid #fff;
+  /* border:1px solid #fff; */
 }
 
 .link-button>a {
@@ -251,6 +260,9 @@ nav>ul {
 }
 .box:hover img{
   animation: forArrow 1s linear  infinite alternate;
+}
+.box:hover{
+  font-weight: bold;
 }
 
 @keyframes forArrow {
@@ -532,9 +544,11 @@ nav>ul {
   line-height: 2;
   font-size: .7em;
   border-radius: 1em;
-  padding: .3em 0;
-  width: 80%;
+  padding: .2em 0;
+  width: 70%;
   margin: 0 auto;
+  letter-spacing: .1em;
+
   /* padding-top: .5em; */
   /* padding-bottom: .5em; */
 

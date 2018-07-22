@@ -5,7 +5,7 @@ function myMap(log,lat,idelem) {
         disableDefaultUI: true,
         zoomControl: true,
 
-        zoom: 12,
+        zoom: 13,
         mapTypeId: google.maps.MapTypeId.roadmap,
                 styles: [
             {elementType: 'geometry', stylers: [{color: '#eaeaea'}]},
