@@ -541,18 +541,26 @@ nav>ul {
   text-decoration: none;
   color: #fff;
   background-color: red;
-  line-height: 2;
+  border: 5px solid red;
+
+  line-height: 2.5;
   font-size: .7em;
   border-radius: 1em;
   padding: .2em 0;
   width: 70%;
   margin: 0 auto;
   letter-spacing: .1em;
-
+  transition:color 1s,background-color 1.5s;
   /* padding-top: .5em; */
   /* padding-bottom: .5em; */
 
-  ;
+  /* ; */
+
+}
+.left-side h1 a:hover{
+  color: red;
+  background-color: #fff;
+  /* border: 5px solid red; */
 
 }
 /* map----------------------------------------------- */
@@ -746,6 +754,7 @@ color: transparent;
   }
   body{
     background-image: url(../img/homesmall.png);
+    position: relative;
 
   }
 
@@ -765,3 +774,18 @@ color: transparent;
 }
 
 }
+/* go top button */
+#go-top{
+    position: fixed;
+    bottom: 20px;
+    right: -95px;
+    z-index: 5000;
+
+
+  }
+  #go-top a{
+    opacity: .5;
+  }
+  #go-top  a:hover{
+    opacity: 1;
+  }

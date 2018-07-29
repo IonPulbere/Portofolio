@@ -28,7 +28,7 @@
       <ul id="responsive-nav" class="responsive-nav">
         <li> <a href="#header" class="actClass scroll">home</a> </li>
         <li> <a href="#projects-page" class="scroll">projects</a> </li>
-        <li> <a href="#sec-map" class="scroll">contact</a> </li>
+        <li> <a href="#formSend" class="scroll">contact</a> </li>
       </ul>
     </nav>
   </header>
@@ -132,10 +132,10 @@
           </ul>
         </div>
         <div class="right-side">
-          <form class="mainform" action="index.html" method="post">
+          <form class="mainform" action="index.html" method="post" id="formSend">
             <!--  name-->
             <span class="input" id="ipt-name">
-					<input class="input__field " type="text" id="name"  required/>
+					<input class="input__field " type="text" id="name"  required autofocus/>
 					<label class="input__label " for="name">
 						<span class="input__label-content " data-content="Name">Name</span>
             </label>
@@ -196,6 +196,11 @@
       <p id="pid"> &copy; Ion Pulbere <span id="year"></span> &reg;</p>
     </div>
   </footer>
+  <div id="go-top">
+      <a href="#call">
+      <img src="assets/img/gotop.png" alt="go top">
+      </a>
+    </div>
   <script src="assets/js/vendor/JQuery3.3.1.js"> </script>
   <script src="assets/js/pagetrans.js">  </script>
   <script src="assets/js/toggle.js">  </script>
@@ -206,6 +211,8 @@
   <script src="assets/js/footer.js">  </script>
   <!-- <script src="assets/js/sticky.js">  </script> -->
   <script src="assets/js/flip.js">  </script>
+  <script src="assets/js/gotopb.js">  </script>
+  <script src="assets/js/sendemail.js">  </script>
 
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4We3lNk83xzwvGqJ80eeHPfhjT-Jr6Yc&callback=createmaps"></script>

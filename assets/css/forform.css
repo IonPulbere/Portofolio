@@ -14,6 +14,7 @@
   grid-area: send;
 }
 form{
+  position: relative;
   display: grid;
   grid-template-rows: auto;
   grid-gap: .5em;
@@ -229,3 +230,26 @@ form{
   background: #d6d6d6;
 }
 } */
+
+/* notification about error */
+.contactNotifDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  color: #fff;
+  z-index: 5001;
+  text-align: center;
+  padding: 2em .2em;
+  font-size: 1.5em;
+  /* display: none; */
+  animation: forcnd 3s linear forwards;
+}
+@keyframes forcnd {
+  0% { opacity: 1}
+  25% { opacity: .7}
+  50% { opacity: .5}
+  75% { opacity: .2}
+  100% { opacity: 0;z-index: -5001;}
+
+}

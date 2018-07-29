@@ -9,5 +9,18 @@ for(var i=0;i<lis.length;i++){
    }
     this.className=myClass;
    });
-
 }
+
+//hide menu after click++++++++++++++++++++++++++++++++++
+  function afterClickLink() {
+    var resNav = document.getElementById('responsive-nav');
+    if (resNav.className.includes('show')) {
+      resNav.className = 'responsive-nav';
+    }
+  }
+  var lis = document.querySelectorAll("#responsive-nav a");
+  for (var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener("click", function() {
+      afterClickLink();
+    });
+  }
