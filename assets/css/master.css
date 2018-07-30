@@ -118,6 +118,7 @@ main{
   justify-content: space-between;
   align-items: center;
   flex-basis: 50%;
+
 }
 
 .logo>a {
@@ -157,6 +158,7 @@ main{
   font-size: 2.2em;
   font-weight: bold;
   padding: .5em;
+  /* padding-right:  0; */
   cursor: pointer;
   display: none;
   color: red;
@@ -405,8 +407,11 @@ nav>ul {
 
 .back {
   transform: rotateY(180deg);
-  background-color: #211F1F;
+  background-color:rgba(33,31,31,1);
+   /* #211F1F; */
   text-align: center;
+  border-radius: 10px;
+
 }
 
 .back>a {
@@ -416,15 +421,25 @@ nav>ul {
   width: 80%;
   margin: 0 auto;
   line-height: 2;
-  margin-top: 25%;
+  margin-top: 5%;
   font-size: 1.6em;
   background-color: red;
   border-radius: 10px;
+  border: 3px solid red;
+  transition: 1s;
+}
+.back>a:hover{
+  color: red;
+  background-color: #fff;
 }
 
 .back>h2 {
   margin-top: 10%;
   font-size: 1.4em;
+}
+.back p{
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 
@@ -630,7 +645,21 @@ color: transparent;
     100%{color:#f8cfcf;}
 }
 /*  dddddddddddddddddddddddddddddddddd*/
+/* go top button */
+#go-top{
+    position: fixed;
+    bottom: 20px;
+    right: -95px;
+    z-index: 5000;
 
+
+  }
+  #go-top a{
+    opacity: .5;
+  }
+  #go-top  a:hover{
+    opacity: 1;
+  }
 
 
 
@@ -746,22 +775,25 @@ color: transparent;
     width: 310px;
     height: 250px;
   }
+
   .link-button {
     flex-direction: column;
     text-align: center;
     width: 100%;
     margin: 0 auto;
   }
+
   body{
     background-image: url(../img/homesmall.png);
-    position: relative;
-
+    /* position: relative; */
+    padding: 0;
   }
-
+    #navmenu{
+      position: relative;
+    }
   .responsive-nav {
+    position: absolute;
     top: 100px;
-    /* margin-top: 1.8em; */
-
     left:0;
 }
 .show {
@@ -772,20 +804,14 @@ color: transparent;
   padding-bottom: 4em;
 
 }
+ /* .logo{ */
+  /* position: relative; */
+  /* } */
+  /* border: 1px solid white; */
+
+/* #nav-toggle{ */
+  /* position: fixed ; */
+  /* right: 0; */
+/* } */
 
 }
-/* go top button */
-#go-top{
-    position: fixed;
-    bottom: 20px;
-    right: -95px;
-    z-index: 5000;
-
-
-  }
-  #go-top a{
-    opacity: .5;
-  }
-  #go-top  a:hover{
-    opacity: 1;
-  }
