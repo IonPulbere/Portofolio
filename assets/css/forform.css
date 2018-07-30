@@ -12,6 +12,7 @@
 }
 #send-bt{
   grid-area: send;
+  outline: none;
 }
 form{
   position: relative;
