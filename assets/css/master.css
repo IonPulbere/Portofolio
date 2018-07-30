@@ -314,6 +314,8 @@ nav>ul {
 }
 .description p{
   color: #000;
+  padding-left: .5em;
+  padding-right: .5em;
 
 }
 .tags-website>ul {
