@@ -27,6 +27,7 @@ h3{
 }
 a {
   display: block;
+  outline: none;
 }
 
 .wrapper-section {
